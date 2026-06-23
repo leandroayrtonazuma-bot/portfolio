@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東 レアンドロについて｜About Leandro Azuma</title>
+  <meta name="description" content="東 レアンドロ（Leandro Azuma）の自己紹介サイト。茨城大学で情報工学を学ぶ学生。考え方や好きなものを中心に、人柄を知ってもらうためのページです。" />
+
+  <meta property="og:title" content="東 レアンドロについて｜About Leandro Azuma" />
+  <meta property="og:description" content="茨城大学の学生・東 レアンドロの自己紹介サイト。" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,900&family=Shippori+Mincho:wght@400;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- 背景を流れる巨大テキスト（マーキー帯より下から表示） -->
+  <div class="bg-text" id="bgText" aria-hidden="true">
+    <div class="bg-text-row bg-text-row-1">
+      <div class="bg-text-track">
+        <span>LEANDRO&nbsp;AZUMA&nbsp;·&nbsp;ABOUT&nbsp;ME&nbsp;·&nbsp;BELIEFS&nbsp;·&nbsp;LIKES&nbsp;·&nbsp;CONTACT&nbsp;·&nbsp;</span>
+        <span>LEANDRO&nbsp;AZUMA&nbsp;·&nbsp;ABOUT&nbsp;ME&nbsp;·&nbsp;BELIEFS&nbsp;·&nbsp;LIKES&nbsp;·&nbsp;CONTACT&nbsp;·&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-decor" aria-hidden="true">
+    <!-- B: ドットグリッドの脈動 -->
+    <span class="bg-dots"></span>
+
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+    <span class="blob blob-5"></span>
+    <span class="blob blob-6"></span>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="トップへ">東 レアンドロ</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="メインナビゲーション">
+        <a href="#about">自己紹介</a>
+        <a href="#beliefs">考え方</a>
+        <a href="#likes">好きなもの</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== ヒーロー ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="hero-kicker">
+          <span class="line-mask"><span class="line-inner">情報工学を学ぶ大学生</span></span>
+        </p>
+        <p class="hero-name">
+          <span class="line-mask"><span class="line-inner">Azuma Leandro</span></span>
+        </p>
+        <h1 id="hero-title" class="hero-title">
+          <span class="line-mask"><span class="line-inner">今しかできないことを、</span></span>
+          <span class="line-mask"><span class="line-inner hero-title-serif"><span class="emphasis">今</span>、全力で。</span></span>
+        </h1>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">もっと知る</a>
+          <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="hero-mark" aria-hidden="true">AZUMA</p>
+
+      <div class="spin-badge" aria-hidden="true">
+        <svg class="spin-badge-svg" viewBox="0 0 200 200">
+          <defs>
+            <path id="spinBadgeCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+          </defs>
+          <text class="spin-badge-text">
+            <textPath href="#spinBadgeCircle">・AZUMA ・ ABOUT ME ・AZUMA ・ ABOUT ME </textPath>
+          </text>
+          <circle class="spin-badge-seal-ring" cx="100" cy="100" r="34" />
+          <text class="spin-badge-seal" x="100" y="100" text-anchor="middle" dominant-baseline="central">東</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== マーキー帯（区切り） ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-row marquee-row-a">
+        <div class="marquee-track">
+          <span>ABOUT ME ・ 自己紹介 ・ 考え方 ・ 好きなもの ・ お問い合わせ ・ LEANDRO AZUMA ・</span>
+          <span>ABOUT ME ・ 自己紹介 ・ 考え方 ・ 好きなもの ・ お問い合わせ ・ LEANDRO AZUMA ・</span>
+          <span>ABOUT ME ・ 自己紹介 ・ 考え方 ・ 好きなもの ・ お問い合わせ ・ LEANDRO AZUMA ・</span>
+          <span>ABOUT ME ・ 自己紹介 ・ 考え方 ・ 好きなもの ・ お問い合わせ ・ LEANDRO AZUMA ・</span>
+        </div>
+      </div>
+      <div class="marquee-row marquee-row-b">
+        <div class="marquee-track">
+          <span>ランニング ・ アニメ ・ 旅 ・ 友達と過ごす時間 ・ 音楽 ・</span>
+          <span>ランニング ・ アニメ ・ 旅 ・ 友達と過ごす時間 ・ 音楽 ・</span>
+          <span>ランニング ・ アニメ ・ 旅 ・ 友達と過ごす時間 ・ 音楽 ・</span>
+          <span>ランニング ・ アニメ ・ 旅 ・ 友達と過ごす時間 ・ 音楽 ・</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 自己紹介 ===== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <span class="section-num" aria-hidden="true">01<br />ABOUT</span>
+      <div class="container about-inner reveal">
+        <div class="about-photo">
+          <img src="assets/profile-photo.jpg" alt="東レアンドロの写真" />
+        </div>
+        <div class="about-text">
+          <p class="section-kicker">01 — Introduction</p>
+          <h2 id="about-title" class="about-name">東レアンドロ</h2>
+          <p class="about-name-furigana">Azuma Leandro</p>
+          <p class="about-lead">
+            ブラジルと日本のハーフで、茨城大学で情報工学を学ぶ学生です。
+          </p>
+          <ul class="about-cards">
+            <li class="about-card">
+              <svg class="about-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M2 8 12 4l10 4-10 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M6 10v5c0 1.3 2.7 2.5 6 2.5s6-1.2 6-2.5v-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M21 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span class="about-card-label">大学・専攻</span>
+              <p class="about-card-value">茨城大学 工学部 情報工学学科</p>
+            </li>
+            <li class="about-card">
+              <svg class="about-card-icon" width="22" height="16" viewBox="0 0 22 16" aria-hidden="true">
+                <rect x="0" y="0" width="22" height="16" rx="2" fill="#F4F1EA" stroke="currentColor" stroke-width="1" stroke-opacity="0.35" />
+                <circle cx="6" cy="8" r="4.2" fill="#C0392B" fill-opacity="0.55" />
+                <path d="M13 1.2 19.6 8 13 14.8Z" fill="#3F7D4C" fill-opacity="0.4" />
+                <circle cx="15.4" cy="8" r="2.6" fill="#E0B23A" fill-opacity="0.55" />
+              </svg>
+              <span class="about-card-label">国籍</span>
+              <p class="about-card-value">ブラジル × 日本のハーフ</p>
+            </li>
+            <li class="about-card">
+              <svg class="about-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3.5" y="4.5" width="17" height="16" rx="1.6" stroke="currentColor" stroke-width="1.5" />
+                <path d="M3.5 9h17" stroke="currentColor" stroke-width="1.5" />
+                <path d="M8 2.5v4M16 2.5v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span class="about-card-label">生年月日</span>
+              <p class="about-card-value">2006.07.26</p>
+            </li>
+            <li class="about-card">
+              <svg class="about-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.5" />
+                <path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M9 4.5 12 2l3 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="about-card-label">MBTI</span>
+              <p class="about-card-value">ENFJ（主人公）</p>
+            </li>
+            <li class="about-card">
+              <svg class="about-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="16" cy="9" r="3" stroke="currentColor" stroke-width="1.5" />
+                <path d="M2.5 19c0-2.8 2.4-5 5.5-5s5.5 2.2 5.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M10.5 19c0-2.8 2.4-5 5.5-5s5.5 2.2 5.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span class="about-card-label">所属団体</span>
+              <p class="about-card-value">NPO法人ドットジェイピー（OPSチーム）</p>
+            </li>
+            <li class="about-card">
+              <svg class="about-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="12" cy="12" r="1.3" fill="currentColor" />
+              </svg>
+              <span class="about-card-label">目指す社会</span>
+              <p class="about-card-value">誰もが技術者になれる世の中</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 大事にしている考え方 ===== -->
+    <section class="section section-invert" id="beliefs" aria-labelledby="beliefs-title">
+      <div class="beliefs-bg" aria-hidden="true">
+        <div class="beliefs-bg-grid"></div>
+      </div>
+      <span class="section-num section-num-invert" aria-hidden="true">02<br />BELIEFS</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker section-kicker-invert">02 — What I believe</p>
+          <h2 id="beliefs-title" class="section-title section-title-invert"><span class="title-mask"><span class="title-inner">大事にしている考え方</span></span></h2>
+        </div>
+
+        <div class="beliefs-list">
+          <article class="belief belief-lg">
+            <h3>未来の自分のために、今を頑張る</h3>
+            <p class="belief-summary">今の積み重ねが、未来の選択肢を増やす。</p>
+            <p class="belief-detail">目の前の困難は、未来の自分への先行投資だと思っています。今の積み重ねが、あとで選べる選択肢を増やしてくれるはず。だから、全力で今を頑張ります。</p>
+          </article>
+          <article class="belief belief-lg">
+            <h3>人にインパクトを与える</h3>
+            <p class="belief-summary">相手の期待や予想を、柔軟な発想力で超える。</p>
+            <p class="belief-detail">相手にインパクトを与えるとは相手の期待や予想を超えること。他の人にはない、柔軟な発想力で相手の印象にずっと残るものを作ることを意識してます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 好きなもの ===== -->
+    <section class="section" id="likes" aria-labelledby="likes-title">
+      <span class="section-num" aria-hidden="true">03<br />LIKES</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">03 — Likes</p>
+          <h2 id="likes-title" class="section-title"><span class="title-mask"><span class="title-inner">好きなもの・興味があること</span></span></h2>
+          <p class="section-lead">仕事とは関係なく、ふだん好きで触れているものです。</p>
+        </div>
+
+        <ul class="likes-list">
+          <li class="likes-item">
+            <svg class="likes-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="15" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1.5" />
+              <path d="M13.5 8.5 9.5 11l2.5 2.5.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12.5 13.5 8 16l-3 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.5 8.5 17 7M12 11l3.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="likes-label">ランニング</span>
+            <p>何もしない時間が好きじゃないので、ヒマな時に行きます。</p>
+          </li>
+          <li class="likes-item">
+            <svg class="likes-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="2" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 9.5v5l4.5-2.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              <path d="M8 2.5 12 5.5 16 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="likes-label">アニメ</span>
+            <p>流行りのものはいち早く見るようにしてます。</p>
+          </li>
+          <li class="likes-item">
+            <svg class="likes-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M2.5 13.5 21 8c1 .8.9 2.2-.3 2.7l-3.5 1.5-4 7.5-2-.6 1.3-5.6-3.6 1.6-2 2.2-1.6-.5.4-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+            <span class="likes-label">旅行</span>
+            <p>遠くへ行くことが心の息抜き。ヨーロッパなどに行ってみたい。</p>
+          </li>
+          <li class="likes-item">
+            <svg class="likes-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8" r="3" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="16" cy="9" r="2.4" stroke="currentColor" stroke-width="1.5" />
+              <path d="M3 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M15 14.2c2.6.2 4.5 2.2 4.5 4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <span class="likes-label">友達と遊ぶこと</span>
+            <p>予定がなくても、誰かと話しているだけで満たされるタイプです。</p>
+          </li>
+          <li class="likes-item">
+            <svg class="likes-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 18V6l10-2v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <span class="likes-label">音楽</span>
+            <p>作業中も移動中も、だいたい何かを聴いています。気分に合わせてジャンルもいろいろです。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== お問い合わせ ===== -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <span class="section-num" aria-hidden="true">04<br />CONTACT</span>
+      <div class="container reveal">
+        <div class="section-head" style="text-align:center; margin-left:auto; margin-right:auto;">
+          <p class="section-kicker">04 — Contact</p>
+          <h2 id="contact-title" class="section-title"><span class="title-mask"><span class="title-inner">お問い合わせ</span></span></h2>
+          <p class="contact-message">一緒に面白いことを<br class="pc-only" />やりましょう。</p>
+        </div>
+
+        <div class="contact-card">
+          <h3 class="contact-card-title">お気軽にどうぞ</h3>
+          <p class="contact-card-lead">
+            お仕事の依頼やご相談、ちょっとした雑談まで、<br />
+            なんでもお気軽にご連絡ください。
+          </p>
+
+          <a href="mailto:leandroayrtonazuma@gmail.com" class="contact-email-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M3.5 6 12 13 20.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>leandroayrtonazuma@gmail.com</span>
+          </a>
+
+          <div class="contact-card-divider"></div>
+
+          <p class="contact-card-sub">SNSのDMでも受け付けています</p>
+
+          <a href="https://www.instagram.com/doro_dolo/" target="_blank" rel="noopener noreferrer" class="contact-sns">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <defs>
+                <linearGradient id="igGradContact" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#FEDA77" />
+                  <stop offset="25%" stop-color="#F58529" />
+                  <stop offset="55%" stop-color="#DD2A7B" />
+                  <stop offset="80%" stop-color="#8134AF" />
+                  <stop offset="100%" stop-color="#515BD4" />
+                </linearGradient>
+              </defs>
+              <rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.8" fill="url(#igGradContact)" />
+              <circle cx="12" cy="12" r="4.6" fill="none" stroke="#fff" stroke-width="1.7" />
+              <circle cx="17.2" cy="6.8" r="1.15" fill="#fff" />
+            </svg>
+            <span class="contact-sns-text">
+              <span class="contact-sns-label">Instagram</span>
+              <span class="contact-sns-value">@doro_dolo</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-name">東 レアンドロ</span>
+      <nav class="footer-links" aria-label="フッターナビゲーション">
+        <a href="#about">自己紹介</a>
+        <a href="#beliefs">考え方</a>
+        <a href="#likes">好きなもの</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <a href="https://www.instagram.com/doro_dolo/" target="_blank" rel="noopener noreferrer" class="footer-instagram" aria-label="Instagramをフォローする">
+        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="igGradFooter" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FEDA77" />
+              <stop offset="25%" stop-color="#F58529" />
+              <stop offset="55%" stop-color="#DD2A7B" />
+              <stop offset="80%" stop-color="#8134AF" />
+              <stop offset="100%" stop-color="#515BD4" />
+            </linearGradient>
+          </defs>
+          <rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.8" fill="url(#igGradFooter)" />
+          <rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.8" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="0.6" />
+          <circle cx="12" cy="12" r="4.6" fill="none" stroke="#fff" stroke-width="1.7" />
+          <circle cx="17.2" cy="6.8" r="1.15" fill="#fff" />
+        </svg>
+        <span>Instagramをフォロー</span>
+      </a>
+      <a href="#top" class="to-top" aria-label="ページトップへ戻る">Top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
