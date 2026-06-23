@@ -653,8 +653,82 @@ ul { list-style: none; }
 }
 .likes-item p { color: #3a382f; font-size: 0.95rem; line-height: 1.85; }
 
+/* ---------- メッセージ ---------- */
+.section-message { padding: 60px 0; }
+.section-message .section-head { margin-bottom: 32px; }
+.letter {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(36px, 5vw, 56px) clamp(28px, 5vw, 56px) clamp(32px, 4vw, 44px);
+  background: #FBF5E4;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 var(--line-soft), 0 24px 48px -28px rgba(26, 26, 26, 0.4);
+}
+/* 便箋の折り目（上辺の薄い二重線） */
+.letter::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 14px;
+  border-top: 1px solid var(--line-soft);
+}
+.letter-greeting {
+  font-family: var(--font-serif-jp);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.message-body {
+  font-family: var(--font-serif-jp);
+  letter-spacing: 0.04em;
+}
+/* 赤い封蝋（ろうそく）スタンプ — カードの縁にまたがせる */
+.wax-seal {
+  position: absolute;
+  right: 30px;
+  bottom: -54px;
+  width: clamp(74px, 12vw, 96px);
+  height: auto;
+  transform: rotate(-7deg);
+  filter: drop-shadow(0 6px 10px rgba(80, 12, 8, 0.4));
+  pointer-events: none;
+}
+.message-sub {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+  color: var(--ink);
+  line-height: 1.55;
+  text-decoration: underline;
+  text-decoration-color: rgba(26, 26, 26, 0.18);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+}
+.message-main {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0.5em 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(26, 26, 26, 0.18);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+}
+.message-sign {
+  margin-top: 28px;
+  font-family: var(--font-serif-jp);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  color: var(--ink);
+  text-align: right;
+}
+
 /* ---------- お問い合わせ ---------- */
-.section-contact { padding: 170px 0 150px; }
+.section-contact { padding: 100px 0 150px; }
 .contact-message {
   font-family: var(--font-serif-jp);
   font-weight: 700;

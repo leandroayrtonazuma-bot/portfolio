@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,900&family=Shippori+Mincho:wght@400;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,900&family=Shippori+Mincho:wght@400;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -246,7 +246,7 @@
               <path d="M8 2.5 12 5.5 16 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
             <span class="likes-label">アニメ</span>
-            <p>流行りのものはいち早く見るようにしてます。</p>
+            <p>ドラえもんで日本語を学びました（ガチ）。</p>
           </li>
           <li class="likes-item">
             <svg class="likes-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -272,18 +272,110 @@
               <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.5" />
             </svg>
             <span class="likes-label">音楽</span>
-            <p>作業中も移動中も、だいたい何かを聴いています。気分に合わせてジャンルもいろいろです。</p>
+            <p>いろんなジャンルの曲を聞きます。ずとまよの大ファン。</p>
           </li>
         </ul>
       </div>
     </section>
 
+    <!-- ===== メッセージ ===== -->
+    <section class="section section-message" id="message" aria-labelledby="message-title">
+      <span class="section-num" aria-hidden="true">04<br />MESSAGE</span>
+      <div class="container reveal">
+        <div class="section-head">
+          <p class="section-kicker">04 — Message</p>
+        </div>
+        <div class="letter">
+          <p class="letter-greeting">見てくれたみなさんへ</p>
+          <p class="message-body">
+            <span class="message-sub">僕のことを知ってくれたでしょうか。</span>
+            <span class="message-main">気軽に話しかけて<br />くれると嬉しいです。</span>
+            <span class="message-sub">よろしくお願いします。</span>
+          </p>
+          <p class="message-sign">— 東 レアンドロ</p>
+          <svg class="wax-seal" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <!-- 蝋本体：縁が明るく盛り上がり、中央へ向かって沈む -->
+              <radialGradient id="waxBody" cx="42%" cy="38%" r="68%">
+                <stop offset="0" stop-color="#CB4C3E" />
+                <stop offset="0.55" stop-color="#A92F25" />
+                <stop offset="0.86" stop-color="#8A2018" />
+                <stop offset="1" stop-color="#B23A2D" />
+              </radialGradient>
+              <!-- 中央の凹み：上が暗く（影）、下が明るい（反射） -->
+              <linearGradient id="waxInner" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#7C1D15" />
+                <stop offset="0.5" stop-color="#9E2A20" />
+                <stop offset="1" stop-color="#BD3B2E" />
+              </linearGradient>
+              <filter id="waxEdge" x="-25%" y="-25%" width="150%" height="150%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="11" result="n" />
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <filter id="waxBlur" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="2.4" />
+              </filter>
+              <path id="waxArcTop" d="M30,100 A70,70 0 0,1 170,100" fill="none" />
+              <path id="waxArcBottom" d="M170,100 A70,70 0 0,1 30,100" fill="none" />
+            </defs>
+
+            <!-- 落ちる影 -->
+            <ellipse cx="103" cy="107" rx="91" ry="89" fill="rgba(55,8,6,0.4)" filter="url(#waxEdge)" />
+            <!-- 蝋の本体（歪んだ縁・蝋だれ） -->
+            <g filter="url(#waxEdge)">
+              <circle cx="100" cy="100" r="91" fill="url(#waxBody)" />
+              <circle cx="150" cy="168" r="12" fill="url(#waxBody)" />
+              <circle cx="44" cy="158" r="8" fill="url(#waxBody)" />
+            </g>
+            <!-- 縁の盛り上がりハイライト -->
+            <circle cx="100" cy="100" r="85" fill="none" stroke="#E68273" stroke-width="3" opacity="0.5" filter="url(#waxBlur)" />
+            <!-- 上部のグロス光沢 -->
+            <ellipse cx="76" cy="60" rx="42" ry="26" fill="#ffffff" opacity="0.16" filter="url(#waxBlur)" />
+
+            <!-- 中央の一段低い平坦エリア -->
+            <circle cx="100" cy="100" r="72" fill="url(#waxInner)" />
+            <!-- 凹みの上部内側の影 -->
+            <ellipse cx="100" cy="74" rx="64" ry="30" fill="#5E140F" opacity="0.3" filter="url(#waxBlur)" />
+
+            <!-- 外周の円形テキスト（彫り込み） -->
+            <g font-family="Fraunces, serif" font-weight="600" font-size="14.5" letter-spacing="2.5">
+              <g fill="#D2645A" opacity="0.5">
+                <text><textPath href="#waxArcTop" startOffset="50%" text-anchor="middle" dy="1">★ AZUMA  LEANDRO ★</textPath></text>
+                <text><textPath href="#waxArcBottom" startOffset="50%" text-anchor="middle" dy="1">EAST  ·  PORTFOLIO</textPath></text>
+              </g>
+              <g fill="#641510">
+                <text><textPath href="#waxArcTop" startOffset="50%" text-anchor="middle">★ AZUMA  LEANDRO ★</textPath></text>
+                <text><textPath href="#waxArcBottom" startOffset="50%" text-anchor="middle">EAST  ·  PORTFOLIO</textPath></text>
+              </g>
+            </g>
+
+            <!-- 内側の二重リング（凹凸） -->
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#D2645A" stroke-width="1.4" opacity="0.45" transform="translate(0,1)" />
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#5E140F" stroke-width="1.8" opacity="0.8" />
+            <circle cx="100" cy="100" r="46" fill="none" stroke="#D2645A" stroke-width="1.2" opacity="0.4" transform="translate(0,1)" />
+            <circle cx="100" cy="100" r="46" fill="none" stroke="#5E140F" stroke-width="1.6" opacity="0.7" />
+
+            <!-- 中央の小さな East（彫り込み） -->
+            <text x="100" y="109" text-anchor="middle" fill="#D2645A" opacity="0.55"
+                  font-family="Fraunces, serif" font-style="italic" font-weight="600" font-size="26">East</text>
+            <text x="100" y="108" text-anchor="middle" fill="#641510"
+                  font-family="Fraunces, serif" font-style="italic" font-weight="600" font-size="26">East</text>
+
+            <!-- 不純物（小さなへこみ） -->
+            <circle cx="62" cy="120" r="1.6" fill="#5E140F" opacity="0.35" />
+            <circle cx="138" cy="86" r="1.3" fill="#5E140F" opacity="0.3" />
+            <circle cx="120" cy="138" r="1.8" fill="#5E140F" opacity="0.3" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== お問い合わせ ===== -->
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
-      <span class="section-num" aria-hidden="true">04<br />CONTACT</span>
+      <span class="section-num" aria-hidden="true">05<br />CONTACT</span>
       <div class="container reveal">
         <div class="section-head" style="text-align:center; margin-left:auto; margin-right:auto;">
-          <p class="section-kicker">04 — Contact</p>
+          <p class="section-kicker">05 — Contact</p>
           <h2 id="contact-title" class="section-title"><span class="title-mask"><span class="title-inner">お問い合わせ</span></span></h2>
           <p class="contact-message">一緒に面白いことを<br class="pc-only" />やりましょう。</p>
         </div>
