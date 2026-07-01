@@ -308,6 +308,12 @@
                 </span>
               </div>
             </a>
+            <button class="work-detail-toggle" type="button" aria-haspopup="dialog" data-modal-open="work-modal-hitachi">
+              <span class="work-detail-toggle-label">意図・工夫・制作時間を見る</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
           </li>
           <li class="work-item">
             <a class="work-card" href="https://leandroayrtonazuma-bot.github.io/LUNA_GELATO_LP/" target="_blank" rel="noopener noreferrer">
@@ -325,6 +331,12 @@
                 </span>
               </div>
             </a>
+            <button class="work-detail-toggle" type="button" aria-haspopup="dialog" data-modal-open="work-modal-luna">
+              <span class="work-detail-toggle-label">意図・工夫・制作時間を見る</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
           </li>
         </ul>
       </div>
@@ -418,6 +430,61 @@
       <a href="#top" class="to-top" aria-label="ページトップへ戻る">Top ↑</a>
     </div>
   </footer>
+
+  <!-- ===== 制作物の詳細モーダル（body直下：重なり順を確実に最前面へ） ===== -->
+  <div class="work-modal" id="work-modal-hitachi" hidden>
+    <div class="work-modal-overlay" data-modal-close></div>
+    <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="work-modal-hitachi-title" tabindex="-1">
+      <button class="work-modal-close" type="button" data-modal-close aria-label="閉じる">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </button>
+      <p class="work-modal-tag">Web Site</p>
+      <h3 id="work-modal-hitachi-title" class="work-modal-title">日立市の魅力紹介サイト（非公式）</h3>
+      <dl class="work-detail-list">
+        <div class="work-detail-row">
+          <dt>制作時間</dt>
+          <dd>5時間</dd>
+        </div>
+        <div class="work-detail-row">
+          <dt>工夫</dt>
+          <dd>水たまり風に変形する画像やスクロール演出で、地方サイトにありがちな堅さを避け、記憶に残る体験を意識。</dd>
+        </div>
+        <div class="work-detail-row">
+          <dt>意図</dt>
+          <dd>日立市に住む人・訪れる人が「行ってみたい」と思えるよう、公式にあまりないデザインで街の魅力を伝えることを狙いました。</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="work-modal" id="work-modal-luna" hidden>
+    <div class="work-modal-overlay" data-modal-close></div>
+    <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="work-modal-luna-title" tabindex="-1">
+      <button class="work-modal-close" type="button" data-modal-close aria-label="閉じる">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </button>
+      <p class="work-modal-tag">Landing Page</p>
+      <h3 id="work-modal-luna-title" class="work-modal-title">LUNA GELATO（架空のLP）</h3>
+      <dl class="work-detail-list">
+        <div class="work-detail-row">
+          <dt>制作時間</dt>
+          <dd>6時間</dd>
+        </div>
+        <div class="work-detail-row">
+          <dt>工夫</dt>
+          <dd>和欧混植のフォント選びや横スクロールのメニュー演出で、写真に頼りすぎず「高級感」を成立させることを意識しました。</dd>
+        </div>
+        <div class="work-detail-row">
+          <dt>意図</dt>
+          <dd>20代女性の利用をメインとして、シンプルながらオシャレなサイトを作成。アイスの鮮やかな色を協調できるように全体をクリーム色にしました。</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

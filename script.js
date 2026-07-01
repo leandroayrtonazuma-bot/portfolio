@@ -293,4 +293,55 @@
     );
     sections.forEach(function (s) { navObserver.observe(s); });
   }
+
+  /* ---------- 5. 制作物の「意図・工夫・制作時間」モーダル ---------- */
+  var activeModal = null;
+  var lastOpener = null;
+
+  function openModal(modal, opener) {
+    if (!modal) return;
+    lastOpener = opener || null;
+    modal.hidden = false;
+    // hidden解除直後にトランジションを効かせる
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { modal.classList.add("is-open"); });
+    });
+    document.body.style.overflow = "hidden";
+    activeModal = modal;
+    var dialog = modal.querySelector(".work-modal-dialog");
+    if (dialog) dialog.focus();
+  }
+
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+    var onEnd = function () {
+      modal.hidden = true;
+      modal.removeEventListener("transitionend", onEnd);
+    };
+    if (prefersReduced) {
+      modal.hidden = true;
+    } else {
+      modal.addEventListener("transitionend", onEnd);
+    }
+    if (activeModal === modal) activeModal = null;
+    if (lastOpener) { lastOpener.focus(); lastOpener = null; }
+  }
+
+  document.querySelectorAll("[data-modal-open]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      openModal(document.getElementById(btn.getAttribute("data-modal-open")), btn);
+    });
+  });
+
+  document.querySelectorAll(".work-modal").forEach(function (modal) {
+    modal.querySelectorAll("[data-modal-close]").forEach(function (el) {
+      el.addEventListener("click", function () { closeModal(modal); });
+    });
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && activeModal) closeModal(activeModal);
+  });
 })();
