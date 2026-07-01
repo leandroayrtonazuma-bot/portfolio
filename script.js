@@ -302,10 +302,9 @@
     if (!modal) return;
     lastOpener = opener || null;
     modal.hidden = false;
-    // hidden解除直後にトランジションを効かせる
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () { modal.classList.add("is-open"); });
-    });
+    // hidden解除直後に強制リフローしてからクラス付与（rAFに依存せず確実に開く）
+    void modal.offsetWidth;
+    modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
     activeModal = modal;
     var dialog = modal.querySelector(".work-modal-dialog");
